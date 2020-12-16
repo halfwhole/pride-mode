@@ -1,0 +1,29 @@
+* pride-mode
+
+Add some pride to Emacs!
+
+[[file:screenshot.png]]
+
+Pride mode is a minor mode that indicates your position
+in the current buffer through a rainbow flag in the modeline.
+The flag should extend from left to right as you move in
+the buffer from top to bottom.
+
+You can scroll the buffer by clicking on the flag area.
+
+** Customizations
+
+- =pride-bar-length=: length of the pride-mode bar in 4px-wide units.
+- =pride-minimum-window-width=: minimum width of the window, below
+  which pride-mode will be disabled. This is important because on
+  smaller windows, the bar can potentially push out more relevant
+  information from the modeline.
+
+** Notes
+
+This version requires the use of XPM images, which should be supported
+by default on most Emacs 23 installations.
+
+** Credits
+
+Code and idea are very much inspired by [[https://github.com/TeMPOraL/nyan-mode][nyan-mode.el]], written by TeMPOraL.

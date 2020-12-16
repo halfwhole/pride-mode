@@ -1,0 +1,19 @@
+/* XPM */
+static char *outerspace[] = {
+/* columns rows colors chars-per-pixel */
+"4 12 1 1",
+"X c None",
+/* pixels */
+"XXXX",
+"XXXX",
+"XXXX",
+"XXXX",
+"XXXX",
+"XXXX",
+"XXXX",
+"XXXX",
+"XXXX",
+"XXXX",
+"XXXX",
+"XXXX"
+};
