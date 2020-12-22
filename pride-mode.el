@@ -77,7 +77,7 @@ Each unit is equal to a 4px-wide image."
     default-string))
 
 (defun pride-create ()
-  "Create the pride flag to be inserted into mode-line."
+  "Create the pride flag to be inserted into the mode-line."
   (if (< (window-width) pride-minimum-window-width)
       ""                                 ; Disable for windows that are too small
     (let* ((num-rainbows (pride--number-of-rainbows))
