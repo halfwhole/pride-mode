@@ -24,6 +24,29 @@ You can scroll the buffer by clicking on the flag area.
 This version requires the use of XPM images, which should be supported
 by default on most Emacs 23 installations.
 
+** Integration with Doom Modeline
+
+Find the directory where the =doom-modeline= package is installed, typically in `.emacs.d/elpa`.
+
+In =doom-modeline-segments.el=, add the following lines in the appropriate places:
+
+#+begin_src elisp
+(defvar pride-minimum-window-width)
+#+end_src
+
+#+begin_src elisp
+((and active
+      (bound-and-true-p pride-mode)
+      (not doom-modeline--limited-width-p)
+      (>= (window-width) pride-minimum-window-width))
+ (concat
+  (doom-modeline-spc)
+  (doom-modeline-spc)
+  (propertize (pride-create) 'mouse-face mouse-face)))
+#+end_src
+
+Then recompile =doom-modeline-segments.el= using =byte-recompile-file=, and you're good to go.
+
 ** Credits
 
 Code and idea are very much inspired by [[https://github.com/TeMPOraL/nyan-mode][nyan-mode.el]], written by TeMPOraL.
